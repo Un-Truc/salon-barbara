@@ -573,7 +573,7 @@ body {
   width: 90%;
   height: 80%;
   cursor: pointer;
-  transform: scale(0.2);
+  transform: scale(0);
   transition: transform 250ms ease-in-out;
 }
 
@@ -1129,24 +1129,20 @@ body {
   width: 200px;
   height: 60px;
 }
-.six-rectangle .container-btn-reservation:active .btn-reservation-anim,
-.huit-rectangle .container-btn-reservation:active .btn-reservation-anim {
+.six-rectangle .container-btn-reservation:hover .btn-reservation-anim,
+.huit-rectangle .container-btn-reservation:hover .btn-reservation-anim {
   transform: scale(1.1, 1.3);
 }
 .six-rectangle .btn-reservation-anim,
 .huit-rectangle .btn-reservation-anim {
+  position: absolute;
+  border: 0.2em rgba(193, 155, 93, 0.6588235294) solid;
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 10%;
-  left: 5%;
-  z-index: 999;
-  border: 0.1rem white solid;
-  width: 90%;
-  height: 80%;
-  cursor: pointer;
-  transform: scale(0.2);
+  cursor: pointer !important;
+  transform: scale(0);
   transition: transform 250ms ease-in-out;
+  z-index: 1;
 }
 .six-rectangle__btn-reservation,
 .huit-rectangle__btn-reservation {

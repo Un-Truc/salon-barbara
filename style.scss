@@ -837,8 +837,16 @@ body {
 }
 
 .btn-voir-plus__anim {
-    @include btn-anim;
-}
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    z-index: 999;
+    border: 0.1rem white solid;
+    width: 90%;
+    height: 80%;
+    cursor: pointer;
+    transform: scale(0);
+    transition: transform 250ms ease-in-out;}
 
 .btn-voir-plus {
     width: 100%;
