@@ -492,7 +492,12 @@ body {
   left: -20px;
   z-index: 1;
   transform: scale(0);
-  animation: translate-lettre-gauche 2000ms 500ms ease-in-out both;
+  animation: translate-lettre-gauche 2000ms 1000ms ease-in-out both;
+}
+@media screen and (max-width: 998px) {
+  .apropos__b {
+    display: none;
+  }
 }
 
 .second-page {
@@ -508,6 +513,7 @@ body {
   .second-page {
     width: 70%;
     padding-left: 1em;
+    padding-right: 1em;
   }
 }
 .second-page__about {
@@ -527,6 +533,7 @@ body {
   font-weight: 700;
   color: white;
   margin-bottom: 3rem;
+  text-align: center;
 }
 @media screen and (max-width: 998px) {
   .second-page__titre {
@@ -544,6 +551,11 @@ body {
   font-size: 20px;
   text-align: left;
 }
+@media screen and (max-width: 998px) {
+  .second-page__texte {
+    text-align: center;
+  }
+}
 
 .container-btn__voir-plus {
   position: relative;
@@ -551,6 +563,7 @@ body {
   height: 60px;
   margin-top: 5rem;
   align-items: center;
+  z-index: 99;
 }
 .container-btn__voir-plus:hover .btn-voir-plus__anim {
   transform: scale(1);
@@ -690,11 +703,13 @@ body {
   width: 200px;
   height: 60px;
 }
+@media screen and (max-width: 998px) {
+  .container-btn-horaire {
+    display: none;
+  }
+}
 .container-btn-horaire:hover .btn-horaire-anim {
   transform: scale(1.1, 1.3);
-}
-.container-btn-horaire:hover:active .btn-horaire {
-  transform: scale(1.05, 1.15);
 }
 
 .btn-horaire-anim {
@@ -704,7 +719,7 @@ body {
   height: 100%;
   cursor: pointer !important;
   transform: scale(0);
-  transition: transform 250ms ease-in-out;
+  transition: transform 200ms ease-in-out;
   z-index: 1;
 }
 
@@ -1001,8 +1016,8 @@ body {
   background-image: url("..//images/team1.jpg");
   height: 650px;
   width: 50%;
-  margin-right: 0;
   background-size: cover;
+  margin-right: 0;
 }
 @media screen and (max-width: 998px) {
   .six-background {
@@ -1020,8 +1035,8 @@ body {
   background-image: url("../images/team2.png");
   height: 650px;
   width: 50%;
-  margin-left: 0;
   background-size: cover;
+  margin-left: 0;
 }
 @media screen and (max-width: 998px) {
   .sept-background {
@@ -1039,8 +1054,8 @@ body {
   background-image: url("../images/team3.jpg");
   height: 650px;
   width: 50%;
-  margin-right: 0;
   background-size: cover;
+  margin-right: 0;
 }
 @media screen and (max-width: 998px) {
   .huit-background {
@@ -1060,7 +1075,6 @@ body {
   flex-direction: column;
   height: 650px;
   width: 50%;
-  margin-left: 0;
   position: relative;
   background-color: #F4EDE6;
   align-items: center;
@@ -1068,6 +1082,7 @@ body {
   padding: 2rem;
   text-align: center;
   overflow: hidden;
+  margin-left: 0;
 }
 @media screen and (max-width: 998px) {
   .six-rectangle,
@@ -1084,6 +1099,9 @@ body {
   line-height: 100%;
   position: absolute;
   z-index: 2;
+  overflow: hidden;
+  transform: scale(0);
+  animation: translate-lettre-droit 2000ms 1000ms ease-in-out both;
 }
 @media screen and (max-width: 998px) {
   .six-rectangle__lettre,
@@ -1141,7 +1159,7 @@ body {
   height: 100%;
   cursor: pointer !important;
   transform: scale(0);
-  transition: transform 250ms ease-in-out;
+  transition: transform 200ms ease-in-out;
   z-index: 1;
 }
 .six-rectangle__btn-reservation,
@@ -1168,12 +1186,14 @@ body {
   flex-direction: column;
   height: 650px;
   width: 50%;
-  margin-right: 0;
+  position: relative;
   background-color: #F4EDE6;
   align-items: center;
   justify-content: center;
   padding: 2rem;
   text-align: center;
+  overflow: hidden;
+  margin-right: 0;
 }
 @media screen and (max-width: 998px) {
   .sept-rectangle {
@@ -1183,12 +1203,14 @@ body {
 }
 .sept-rectangle__lettre {
   font-family: "Qwigley", cursive;
-  font-size: 350px;
   font-size: 450px;
-  color: rgba(193, 154, 93, 0.08);
+  color: rgba(134, 113, 79, 0.08);
   line-height: 100%;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
+  overflow: hidden;
+  transform: scale(0);
+  animation: translate-lettre-droit 2000ms 1000ms ease-in-out both;
 }
 @media screen and (max-width: 998px) {
   .sept-rectangle__lettre {
@@ -1200,6 +1222,7 @@ body {
   font-size: 3.75em;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  z-index: 2;
 }
 @media screen and (max-width: 998px) {
   .sept-rectangle__h2 {
@@ -1211,6 +1234,7 @@ body {
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 3rem;
+  z-index: 2;
 }
 .sept-rectangle__p {
   font-family: "Montserrat", serif;
@@ -1220,7 +1244,27 @@ body {
   margin-bottom: 3rem;
   z-index: 2;
 }
+.sept-rectangle .container-btn-reservation {
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 60px;
+}
+.sept-rectangle .container-btn-reservation:hover .btn-reservation-anim {
+  transform: scale(1.1, 1.3);
+}
+.sept-rectangle .btn-reservation-anim {
+  position: absolute;
+  border: 0.2em rgba(193, 155, 93, 0.6588235294) solid;
+  width: 100%;
+  height: 100%;
+  cursor: pointer !important;
+  transform: scale(0);
+  transition: transform 200ms ease-in-out;
+  z-index: 1;
+}
 .sept-rectangle__btn-reservation {
+  display: block;
   background-color: black !important;
   width: 200px !important;
   height: 60px !important;
@@ -1233,6 +1277,8 @@ body {
   line-height: 60px;
   position: relative;
   z-index: 2;
+  width: 100%;
+  height: 100%;
 }
 
 .container-tarifs {
@@ -1255,10 +1301,13 @@ body {
 .container-tarifs__lettre-p {
   font-family: "Qwigley", cursive;
   color: rgba(255, 255, 255, 0.05);
-  font-size: 620px;
+  font-size: 600px;
   line-height: 300px;
   position: absolute;
   margin-top: 10%;
+  overflow: hidden;
+  transform: scale(0);
+  animation: translate-lettre-droit 2000ms 1000ms ease-in-out both;
 }
 @media screen and (max-width: 998px) {
   .container-tarifs__lettre-p {
@@ -1624,8 +1673,30 @@ body {
   gap: 1em;
 }
 
+.container-btn-reservation {
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 60px;
+  margin-bottom: 2em;
+}
+.container-btn-reservation:hover .btn-reservation-anim {
+  transform: scale(1.1, 1.3);
+}
+
+.btn-reservation-anim {
+  position: absolute;
+  border: 0.2em rgba(193, 155, 93, 0.6588235294) solid;
+  width: 100%;
+  height: 100%;
+  cursor: pointer !important;
+  transform: scale(0);
+  transition: transform 200ms ease-in-out;
+  z-index: 1;
+}
+
 .btn-reservation {
-  margin-left: 0;
+  display: block;
   background-color: black !important;
   width: 200px !important;
   height: 60px !important;
@@ -1636,7 +1707,10 @@ body {
   cursor: pointer !important;
   text-align: center !important;
   line-height: 60px;
-  margin-right: 100%;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
 }
 
 input[type=checkbox].checkbox {
