@@ -1882,11 +1882,21 @@ footer {
   font-family: "Montserrat", serif;
 }
 
+.footercopy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .copy {
   font-family: "Grandiflora One", cursive;
   text-align: center;
   color: white;
   padding-top: 1em;
+}
+.copy img {
+  height: 50px;
+  margin-left: 10px;
 }
 @media screen and (max-width: 998px) {
   .copy {
